@@ -85,19 +85,19 @@ byte value;
 // Display bottom right
 U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
-String APIROOT = "http://hw.airgradient.com/";
+String APIROOT = "http://green.dcnt.company:38080/";
 
 // set to true to switch from Celcius to Fahrenheit
 boolean inF = false;
 
 // PM2.5 in US AQI (default ug/m3)
-boolean inUSAQI = false;
+boolean inUSAQI = true;
 
 // Display Position
 boolean displayTop = true;
 
 // use RGB LED Bar
-boolean useRGBledBar = true;
+boolean useRGBledBar = false;
 
 // set to true if you want to connect to wifi. You have 60 seconds to connect. Then it will go into an offline mode.
 boolean connectWIFI = true;
@@ -133,7 +133,7 @@ unsigned long previousTempHum = 0;
 float temp;
 int hum;
 
-int buttonConfig = 0;
+int buttonConfig = 5;
 int lastState = LOW;
 int currentState;
 unsigned long pressedTime = 0;
